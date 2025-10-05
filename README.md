@@ -10,7 +10,7 @@ A minimal and clean Suckless DWM setup that just sucks less.
 Before installing, make sure the following packages are installed:
 
 ```bash
-sudo pacman -S xorg-xinit base-devel git nvim feh
+sudo pacman -S xorg-xinit base-devel git nvim feh picom flameshot brightnessctl
 ```
 
 ## Installation
@@ -18,7 +18,7 @@ sudo pacman -S xorg-xinit base-devel git nvim feh
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/Pritamdhiman/Suckless.git
+git clone https://github.com/prtmxio/Suckless.git
 cd Suckless
 ```
 
