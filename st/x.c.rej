@@ -1,0 +1,29 @@
+--- x.c
++++ x.c
+@@ -1145,11 +1156,25 @@ xinit(int cols, int rows)
+ 	Window parent, root;
+ 	pid_t thispid = getpid();
+ 	XColor xmousefg, xmousebg;
++	XWindowAttributes attr;
++	XVisualInfo vis;
+ 
+ 	if (!(xw.dpy = XOpenDisplay(NULL)))
+ 		die("can't open display\n");
+ 	xw.scr = XDefaultScreen(xw.dpy);
+-	xw.vis = XDefaultVisual(xw.dpy, xw.scr);
++
++	root = XRootWindow(xw.dpy, xw.scr);
++	if (!(opt_embed && (parent = strtol(opt_embed, NULL, 0))))
++		parent = root;
++
++	if (XMatchVisualInfo(xw.dpy, xw.scr, 32, TrueColor, &vis) != 0) {
++		xw.vis = vis.visual;
++		xw.depth = vis.depth;
++	} else {
++		XGetWindowAttributes(xw.dpy, parent, &attr);
++		xw.vis = attr.visual;
++		xw.depth = attr.depth;
++	}
+ 
+ 	/* font */
+ 	if (!FcInit())
