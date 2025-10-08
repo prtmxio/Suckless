@@ -3,7 +3,7 @@ A minimal and clean Suckless DWM setup that just sucks less.
 
 ## Screenshots
 
-<img src="images/My_rice.png" width="450" height="240" alt="DWM Screenshot">
+<img src="images/img.png" width="450" height="240" alt="DWM Screenshot">
 
 ## Dependencies
 
