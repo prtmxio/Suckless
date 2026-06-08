@@ -80,6 +80,110 @@ if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
   exec startx
 fi
 ```
+# dwm Keybind Cheat Sheet
+
+> `Mod` = **Alt** (Mod1Mask) | New windows attach **below** active window
+
+---
+
+## Layouts
+
+| Keybind | Action |
+|---|---|
+| `Mod + r` | Dwindle (default) |
+| `Mod + t` | Tile |
+| `Mod + f` | Float |
+| `Mod + m` | Monocle |
+| `Mod + Shift + r` | Spiral |
+| `Mod + Space` | Toggle last layout |
+| `Mod + Shift + Space` | Toggle floating |
+
+---
+
+## Windows
+
+| Keybind | Action |
+|---|---|
+| `Mod + j / k` | Focus next / prev window |
+| `Mod + h / l` | Shrink / grow master area |
+| `Mod + i / d` | Increase / decrease master count |
+| `Mod + \` | Zoom (swap focused to master) |
+| `Mod + q` | Kill focused window |
+| `Mod + Tab` | Toggle last tag view |
+
+---
+
+## Launch
+
+| Keybind | Action |
+|---|---|
+| `Mod + Return` | Terminal (kitty) |
+| `Mod + p` | dmenu |
+| `Mod + n` | Nautilus |
+
+---
+
+## Screenshot
+
+| Keybind | Action |
+|---|---|
+| `Print` | Full screen → `~/Pictures/Screenshots` |
+| `Shift + Print` | Interactive selection (flameshot gui) |
+
+---
+
+## Media Keys
+
+| Keybind | Action |
+|---|---|
+| `Volume Up` | +5% volume |
+| `Volume Down` | -5% volume |
+| `Mute` | Toggle mute |
+| `Brightness Up` | +5% brightness |
+| `Brightness Down` | -5% brightness |
+
+---
+
+## Tags (Workspaces)
+
+| Keybind | Action |
+|---|---|
+| `Mod + 1–9` | Switch to tag |
+| `Mod + Ctrl + 1–9` | Toggle tag view |
+| `Mod + Shift + 1–9` | Move window to tag |
+| `Mod + Ctrl + Shift + 1–9` | Toggle window on tag |
+| `Mod + 0` | View all tags |
+| `Mod + Shift + 0` | Send window to all tags |
+
+---
+
+## Bar & System
+
+| Keybind | Action |
+|---|---|
+| `Mod + b` | Toggle bar |
+| `Mod + , / .` | Focus prev / next monitor |
+| `Mod + Shift + , / .` | Move window to prev / next monitor |
+| `Mod + Shift + q` | Quit dwm |
+
+---
+
+## Mouse (on windows)
+
+| Action | Function |
+|---|---|
+| `Mod + Left click drag` | Move window |
+| `Mod + Right click drag` | Resize window |
+| `Mod + Middle click` | Toggle floating |
+
+---
+
+## Tags Layout
+
+```
+ 1   2   3   4   5  ▫6  ▫7  ▫8  ▫9
+```
+Tags 1–5 use nerd font icons, 6–9 use `▫` dots.
 
 ## Usage
 
